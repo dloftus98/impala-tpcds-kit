@@ -1,8 +1,7 @@
 #!/bin/bash
 source tpcds-env.sh
 
-impala-shell $IMPALA_SHELL_OPTS -d ${TPCDS_DBNAME} -q "
-set REQUEST_POOL=$REQUEST_POOL;
+impala-shell -d ${TPCDS_DBNAME} -q "
 drop table if exists store_sales;
 
 create table store_sales
